@@ -1,0 +1,14 @@
+@use './base/reset';
+@use './base/variables';
+@use './base/typography';
+
+@use './components/buttons';
+@use './components/forms';
+@use './components/cards';
+
+@use './pages/register';
+@use './pages/login';
+@use './pages/profile';
+@use './pages/ranking';
+@use './pages/details';
+@use './pages/add';

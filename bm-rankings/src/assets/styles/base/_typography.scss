@@ -1,0 +1,21 @@
+@use 'sass:color';
+@use './variables';
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: variables.$font-family;
+  color: variables.$text-color;
+}
+
+p {
+  font-size: 1rem;
+  color: color.scale(variables.$text-color, $lightness: 20%);
+}
+
+a {
+  color: variables.$primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

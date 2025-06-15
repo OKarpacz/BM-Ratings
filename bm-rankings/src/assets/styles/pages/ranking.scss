@@ -1,0 +1,30 @@
+@use '../base/variables';
+@use 'sass:color';
+
+#ranking-page {
+  padding: variables.$spacing-large;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: variables.$spacing-small;
+      padding: variables.$spacing-small;
+      border: 1px solid color.adjust(variables.$text-color, $lightness: 40%);
+      border-radius: variables.$border-radius;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background-color: color.adjust(variables.$background-color, $lightness: 10%);
+      }
+
+      .icon {
+        margin-right: variables.$spacing-small;
+      }
+    }
+  }
+}

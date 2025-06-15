@@ -1,0 +1,47 @@
+@use 'sass:color';
+@use '../base/variables';
+
+#add-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: variables.$spacing-large;
+  background-color: #fff;
+  border-radius: variables.$border-radius;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-medium;
+
+    label {
+      font-weight: bold;
+      color: variables.$text-color;
+    }
+
+    input, textarea, select {
+      padding: variables.$spacing-small;
+      border: 1px solid color.adjust(variables.$text-color, $lightness: 40%);
+      border-radius: variables.$border-radius;
+
+      &:focus {
+        outline: none;
+        border-color: variables.$primary-color;
+        box-shadow: 0 0 4px color.adjust(variables.$primary-color, $lightness: 20%);
+      }
+    }
+
+    button {
+      margin-top: variables.$spacing-small;
+      padding: variables.$spacing-small variables.$spacing-medium;
+      border: none;
+      border-radius: variables.$border-radius;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: color.adjust(variables.$primary-color, $lightness: -10%);
+      }
+    }
+  }
+}

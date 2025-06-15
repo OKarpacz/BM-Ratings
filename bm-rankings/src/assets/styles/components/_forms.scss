@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use '../base/variables';
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-medium;
+
+  label {
+    font-weight: bold;
+    color: variables.$text-color;
+  }
+
+  input, textarea, select {
+    padding: variables.$spacing-small;
+    border: 1px solid color.adjust(variables.$text-color, $lightness: 40%);
+    border-radius: variables.$border-radius;
+    font-family: variables.$font-family;
+
+    &:focus {
+      outline: none;
+      border-color: variables.$primary-color;
+    }
+  }
+
+  button {
+    align-self: flex-start;
+  }
+}

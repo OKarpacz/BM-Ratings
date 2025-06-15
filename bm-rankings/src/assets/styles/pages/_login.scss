@@ -1,0 +1,10 @@
+@use '../base/variables';
+
+#login-page {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: variables.$spacing-large;
+  background-color: #fff;
+  border-radius: variables.$border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use '../base/variables';
+
+button {
+  font-family: variables.$font-family;
+  padding: variables.$spacing-small variables.$spacing-medium;
+  border: none;
+  border-radius: variables.$border-radius;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &.primary {
+    background-color: variables.$primary-color;
+    color: #fff;
+
+    &:hover {
+      background-color: color.adjust(variables.$primary-color, $lightness: -10%);
+    }
+  }
+
+  &.secondary {
+    background-color: variables.$secondary-color;
+    color: #fff;
+
+    &:hover {
+      background-color: color.adjust(variables.$secondary-color, $lightness: -10%);
+    }
+  }
+}

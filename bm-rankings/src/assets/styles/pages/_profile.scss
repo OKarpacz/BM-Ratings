@@ -1,0 +1,27 @@
+@use 'sass:color';
+@use '../base/variables';
+
+#profile-page {
+  padding: variables.$spacing-large;
+
+  h2 {
+    margin-bottom: variables.$spacing-medium;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: variables.$spacing-small;
+      padding: variables.$spacing-small;
+      border: 1px solid color.adjust(variables.$text-color, $lightness: 40%);
+      border-radius: variables.$border-radius;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background-color: color.adjust(variables.$background-color, $lightness: 10%);
+      }
+    }
+  }
+}

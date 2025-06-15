@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BM Rankings</title>
+  <script type="module" src="./app.js" defer></script>
+  <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+  <!-- Register Page -->
+  <main id="register-page">
+    <h1>Rejestracja</h1>
+    <form id="register-form">
+      <label for="register-username">Login:</label>
+      <input type="text" id="register-username" name="register-username" required />
+      <label for="register-password">Hasło:</label>
+      <input type="password" id="register-password" name="register-password" required />
+      <button type="submit">Zarejestruj</button>
+    </form>
+    <p>Masz już konto? <a href="#" id="go-to-login">Zaloguj się</a></p>
+  </main>
+
+  <!-- Login Page -->
+  <main id="login-page" style="display: none;">
+    <h1>BM Rankings</h1>
+    <form id="login-form">
+      <label for="username">Login:</label>
+      <input type="text" id="username" name="username" required />
+      <label for="password">Hasło:</label>
+      <input type="password" id="password" name="password" required />
+      <button type="submit">Zaloguj</button>
+    </form>
+    <p>Nie masz konta? <a href="#" id="go-to-register">Zarejestruj się</a></p>
+  </main>
+
+  <!-- Main App -->
+  <main id="app" style="display: none;">
+    <header>
+      <h1>BM Rankings</h1>
+      <button id="logout-btn">Wyloguj</button>
+      <button id="go-to-ranking">Ranking</button>
+      <button id="go-to-profile">Profil</button>
+      <button id="go-to-add">Dodaj Album/Zespół</button> 
+    </header>
+    <section id="album-list-container">
+        <div id="album-list"></div>
+      </section>
+  </main>
+    <!-- Ranking Page -->
+    <main id="ranking-page" style="display: none;">
+        <h1>Ranking Albumów</h1>
+        <ul id="ranking-list"></ul>
+        <button id="back-to-app-from-ranking">Powrót</button>
+    </main>
+
+    <!-- Album Details -->
+    <main id="album-details" style="display: none;">
+    <h1>Szczegóły Albumu</h1>
+    <div id="album-info">
+      <img id="album-cover" src="" alt="Okładka albumu" />
+      <h2 id="album-title"></h2>
+      <p id="album-artist"></p>
+      <p id="album-description"></p>
+      <ul id="album-tracklist"></ul>
+      <p>Średnia ocena: <span id="album-rating"></span></p>
+    </div>
+    <section id="album-comments">
+        <h3>Komentarze</h3>
+        <ul id="comments-list"></ul>
+        <form id="add-comment-form">
+          <label for="comment-text">Twój komentarz:</label>
+          <textarea id="comment-text" name="comment-text" required></textarea>
+          <label for="comment-rating">Ocena:</label>
+          <select id="comment-rating" name="comment-rating" required>
+            <option value="5">5 - Świetny</option>
+            <option value="4">4 - Dobry</option>
+            <option value="3">3 - Średni</option>
+            <option value="2">2 - Słaby</option>
+            <option value="1">1 - Bardzo słaby</option>
+          </select>
+          <button type="submit">Dodaj komentarz</button>
+        </form>
+        <button id="back-to-app-from-details">Powrót</button>  
+      </section>
+  </main>
+
+    <!-- User Profile -->
+    <main id="profile-page" style="display: none;"> 
+        <h1>Profil Użytkownika</h1>
+        <section id="user-reviews">
+          <h2>Twoje Recenzje</h2>
+          <ul id="reviews-list"></ul>
+        </section>
+        <section id="favorite-albums">
+          <h2>Ulubione Albumy</h2>
+          <ul id="favorites-list"></ul>
+        </section>
+        <button id="back-to-app-from-profile">Powrót</button>
+    </main>
+
+    <!-- Add Album/Artist -->
+    <main id="add-page" style="display: none;"> 
+        <h1>Dodaj Album/Zespół</h1>
+        <form id="add-form">
+          <label for="add-title">Tytuł:</label>
+          <input type="text" id="add-title" name="add-title" required />
+          <label for="add-artist">Artysta:</label>
+          <input type="text" id="add-artist" name="add-artist" required />
+          <label for="add-cover">Okładka (URL):</label>
+          <input type="text" id="add-cover" name="add-cover" required />
+          <label for="add-description">Opis:</label>
+          <textarea id="add-description" name="add-description" required></textarea>
+          <label for="add-rating">Ocena:</label>
+          <input type="number" id="add-rating" name="add-rating" min="1" max="5" required />
+          <button type="submit">Zgłoś</button>
+        </form>
+        <button id="back-to-app-from-add">Powrót</button>
+      </main>
+</body>
+</html>

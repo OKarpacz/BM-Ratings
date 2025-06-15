@@ -1,0 +1,26 @@
+@use '../base/variables';
+
+#album-details {
+  padding: variables.$spacing-large;
+
+  #album-info {
+    margin-bottom: variables.$spacing-large;
+
+    img {
+      max-width: 100%;
+      border-radius: variables.$border-radius;
+    }
+  }
+
+  #album-comments {
+    h3 {
+      margin-bottom: variables.$spacing-medium;
+    }
+  }
+}
+
+#album-details #album-info img {
+  max-width: 250px; 
+  height: auto; 
+  border-radius: 4px;
+}
